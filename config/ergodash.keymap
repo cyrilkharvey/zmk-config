@@ -18,25 +18,25 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-/* QWERTY
+/* Colemac-DH 
  * .----------------------------------------------------------------------------------------------------------------------.
- * |  `   |   1  |   2  |   3  |   4  |   5  |  [   |                    |  ]   |   6  |   7  |   8  |   9  |   0  | PScr |
+ * |      |      |      |      |      |      |      |                    |      |      |      |      |      |      |      |
  * |------+------+------+------+------+------+------+--------------------+------+------+------+------+------+------+------|
- * | ESC  |   Q  |   W  |   E  |   R  |   T  |  -   |                    |  =   |   Y  |   U  |   I  |   O  |   P  |  \   |
+ * | ESC  |   Q  |   W  |   F  |   P  |   B  |  -   |                    |  =   |   J  |   L  |   U  |   Y  |   ;  |  \   |
  * |------+------+------+------+------+------+------+--------------------+------+------+------+------+------+------+------|
- * | Tab  |   A  |   S  |   D  |   F  |   G  | Del  |                    | Bksp |   H  |   J  |   K  |   L  |   ;  |  '   |
+ * | Tab  |   A  |   R  |   S  |   T  |   G  | Del  |                    | Bksp |   M  |   N  |   E  |   I  |   O  |  '   |
  * |------+------+------+------+------+------+---------------------------+------+------+------+------+------+------+------|
- * | Shift|   Z  |   X  |   C  |   V  |   B  | End  |                    | Home |   N  |   M  |   ,  |   .  |   /  | Shift|
+ * | Shift|   Z  |   X  |   C  |   D  |   V  |      |                    |      |   K  |   H  |   ,  |   .  |   /  |  -   |
  * |-------------+------+------+------+------+------+------+------+------+------+------+------+------+------+-------------|
- * | Ctrl |      | PGDN | Win  |||||||| Alt  | Space| Lower|||||||| Raise| Enter| RAlt ||||||||      | PGUP | Ins  | RCtrl|
+ * | Ctrl | META |      |      ||||||||LOWER | Bksp | Enter||||||||  Tab | Space| RAISE||||||||      |   [  |   ]  | RCtrl|
  * .----------------------------------------------------------------------------------------------------------------------.
  */
                         bindings = <
-&kp  GRAVE    &kp  N1       &kp  N2       &kp  N3       &kp  N4       &kp  N5       &kp  LBKT              &kp  RBKT     &kp  N6       &kp  N7       &kp  N8       &kp  N9       &kp  N0       &kp  PSCRN
-&kp  ESC      &kp  Q        &kp  W        &kp  E        &kp  R        &kp  T        &kp  MINUS             &kp  EQUAL    &kp  Y        &kp  U        &kp  I        &kp  O        &kp  P        &kp  BSLH
-&kp  TAB      &kp  A        &kp  S        &kp  D        &kp  F        &kp  G        &kp  DEL               &kp  BSPC     &kp  H        &kp  J        &kp  K        &kp  L        &kp  SEMI     &kp  SQT
-&kp  LSHFT    &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &kp  END               &kp  HOME     &kp  N        &kp  M        &kp  COMMA    &kp  DOT      &kp  SLASH    &kp  RSHFT
-&kp  LCTRL    &none         &kp  PG_DN    &kp  LMETA    &kp  LALT     &kp  SPACE    &mo  LOWER             &mo  RAISE    &kp  RET      &kp  RALT     &none         &kp  PG_UP    &kp  INS      &kp  RCTRL
+&none         &none         &none         &none         &none         &none         &none                  &none         &none         &none         &none         &none         &none         &none  
+&kp  ESC      &kp  Q        &kp  W        &kp  F        &kp  P        &kp  B        &kp  MINUS             &kp  EQUAL    &kp  J        &kp  L        &kp  U        &kp  Y        &kp  SEMI     &kp  BSLH
+&kp  TAB      &kp  A        &kp  S        &kp  D        &kp  F        &kp  G        &kp  DEL               &kp  BSPC     &kp  M        &kp  N        &kp  E        &kp  I        &kp  O        &kp  SQT
+&kp  LSHFT    &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &kp  END               &none         &kp  K        &kp  H        &kp  COMMA    &kp  DOT      &kp  SLASH    &kp  MINUS
+&kp  LCTRL    &LMETA        &none         &none         &kp  LOWER    &kp  BSPC     &mo  RET               &kp  TAB      &kp  SPACE     &kp RAISE     &none         &kp  LBKT    &kp  RBKT     &kp  RCTRL
                         >;
                 };
                 lower_layer {

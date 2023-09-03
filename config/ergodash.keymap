@@ -34,8 +34,8 @@
                         bindings = <
 &none         &none         &none         &none         &none         &none         &none                  &none         &none         &none         &none         &none         &none         &none  
 &kp  ESC      &kp  Q        &kp  W        &kp  F        &kp  P        &kp  B        &kp  MINUS             &kp  EQUAL    &kp  J        &kp  L        &kp  U        &kp  Y        &kp  SEMI     &kp  BSLH
-&kp  TAB      &kp  A        &kp  S        &kp  D        &kp  F        &kp  G        &kp  DEL               &kp  BSPC     &kp  M        &kp  N        &kp  E        &kp  I        &kp  O        &kp  SQT
-&kp  LSHFT    &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &kp  END               &none         &kp  K        &kp  H        &kp  COMMA    &kp  DOT      &kp  SLASH    &kp  MINUS
+&kp  TAB      &kp  A        &kp  R        &kp  S        &kp  T        &kp  G        &kp  DEL               &kp  BSPC     &kp  M        &kp  N        &kp  E        &kp  I        &kp  O        &kp  SQT
+&kp  LSHFT    &kp  Z        &kp  X        &kp  C        &kp  D        &kp  V        &none                  &none         &kp  K        &kp  H        &kp  COMMA    &kp  DOT      &kp  SLASH    &kp  MINUS
 &kp  LCTRL    &kp LMETA     &none         &none         &kp  LOWER    &kp  BSPC     &kp  RET               &kp  TAB      &kp  SPACE    &kp RAISE     &none         &kp  LBKT     &kp  RBKT     &kp  RCTRL
                         >;
                 };

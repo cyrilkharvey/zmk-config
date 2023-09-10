@@ -41,23 +41,23 @@
                 };
                 lower_layer {
 /* .----------------------------------------------------------------------------------------------------------------------.
- * |  F11 |  F1  |  F2  |  F3  |  F4  |  F5  |      |                    |      |  F6  |  F7  |  F8  |  F9  |  F10 |  F12 |
- * |------+------+------+------+------+------+------+--------------------+------+------+------+------+------+------+------|
  * |      |      |      |      |      |      |      |                    |      |      |      |      |      |      |      |
  * |------+------+------+------+------+------+------+--------------------+------+------+------+------+------+------+------|
- * |      |      |      |      |      |      |      |                    |      |      |      |      |      |      |      |
+ * |      |      |      |      |      |      |      |                    |      |      |   7  |   8  |   9  |      |      |
+ * |------+------+------+------+------+------+------+--------------------+------+------+------+------+------+------+------|
+ * |      |      |      |      |      |      |      |                    |      |      |   4  |   5  |   6  |      |      |
  * |------+------+------+------+------+------+---------------------------+------+------+------+------+------+------+------|
- * | Shift| Boot | Reset|      |      |      |      |                    |      |      |      |      |      |      | Shift|
+ * |      |      |      |      |      |      |      |                    |      |      |   1  |   2  |   3  |      |      |
  * |-------------+------+------+------+------+------+------+------+------+------+------+------+------+------+-------------|
- * | Ctlr |      |      |  Win |||||||| Alt  |      | Lower|||||||| Raise|      | RAlt ||||||||      |      |      | RCtrl|
+ * |      |      |      |      ||||||||      |      |      ||||||||      |      | RAISE||||||||      |      |      |      |
  * .----------------------------------------------------------------------------------------------------------------------.
  */ /* FIXME boot and reset are not yet locale aware */
                         bindings = <
-&kp  F11      &kp  F1       &kp  F2       &kp  F3       &kp  F4       &kp  F5       &none                  &none         &kp  F6       &kp  F7       &kp  F8       &kp  F9       &kp  F10      &kp  F12
 &none         &none         &none         &none         &none         &none         &none                  &none         &none         &none         &none         &none         &none         &none
-&none         &none         &none         &none         &none         &none         &none                  &none         &none         &none         &none         &none         &none         &none
-&trans        &bootloader   &sys_reset        &none         &none         &none         &none                  &none         &none         &none         &none         &none         &none         &trans
-&trans        &none         &none         &trans        &trans        &none         &trans                 &trans        &none         &trans        &none         &none         &none         &trans
+&none         &none         &none         &none         &none         &none         &none                  &none         &none         &kp 7         &kp 8         &kp 9         &none         &none
+&none         &none         &none         &none         &none         &none         &none                  &none         &none         &kp 4         &kp 5         &kp 6         &none         &none
+&none         &none         &none         &none         &none         &none         &none                  &none         &none         &kp 1         &kp 2         &kp 3         &none         &none
+&none         &none         &none         &none         &none         &none         &none                  &none         &none         &kp RAISE     &none         &none         &none         &none
                         >;
                 };
                 raise_layer {

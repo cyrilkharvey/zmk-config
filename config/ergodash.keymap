@@ -1,7 +1,7 @@
 /*
- * Copyright (c) 2020 The ZMK Contributors
- *
- * SPDX-License-Identifier: MIT
+ * Cyril Harvey
+ * Sept. 24 2023
+ * Modified Ergodash firmware to accomodate the "mini" variety
  */
 
 #include <behaviors.dtsi>
@@ -10,7 +10,6 @@
 
 #define DEFAULT 0
 #define LOWER   1
-#define RAISE   2
 
 
 / {
@@ -18,19 +17,6 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-/* Colemac-DH 
- * .----------------------------------------------------------------------------------------------------------------------.
- * |      |      |      |      |      |      |      |                    |      |      |      |      |      |      |      |
- * |------+------+------+------+------+------+------+--------------------+------+------+------+------+------+------+------|
- * | ESC  |   Q  |   W  |   F  |   P  |   B  |  -   |                    |  =   |   J  |   L  |   U  |   Y  |   ;  |  \   |
- * |------+------+------+------+------+------+------+--------------------+------+------+------+------+------+------+------|
- * | TAB  |   A  |   R  |   S  |   T  |   G  | Del  |                    | Bksp |   M  |   N  |   E  |   I  |   O  |  '   |
- * |------+------+------+------+------+------+---------------------------+------+------+------+------+------+------+------|
- * | Shift|   Z  |   X  |   C  |   D  |   V  |      |                    |      |   K  |   H  |   ,  |   .  |   /  |  -   |
- * |-------------+------+------+------+------+------+------+------+------+------+------+------+------+------+-------------|
- * | Ctrl | META |      |      ||||||||LOWER | Bksp | Enter||||||||  Tab | Space| RAISE||||||||      |   [  |   ]  | RCtrl|
- * .----------------------------------------------------------------------------------------------------------------------.
- */
                         bindings = <
 &none         &none         &none         &none         &none         &none         &none                  &none         &none         &none         &none         &none         &none         &none  
 &kp  ESC      &kp  Q        &kp  W        &kp  F        &kp  P        &kp  B        &kp  MINUS             &kp  EQUAL    &kp  J        &kp  L        &kp  U        &kp  Y        &kp  SEMI     &kp  BSLH
@@ -40,45 +26,12 @@
                         >;
                 };
                 lower_layer {
-/* .----------------------------------------------------------------------------------------------------------------------.
- * |      |      |      |      |      |      |      |                    |      |      |      |      |      |      |      |
- * |------+------+------+------+------+------+------+--------------------+------+------+------+------+------+------+------|
- * |      |      |      |      |      |      |      |                    |      |      |   7  |   8  |   9  |      |      |
- * |------+------+------+------+------+------+------+--------------------+------+------+------+------+------+------+------|
- * |      |      |      |      |      |      |      |                    |      |      |   4  |   5  |   6  |      |      |
- * |------+------+------+------+------+------+---------------------------+------+------+------+------+------+------+------|
- * |      |      |      |      |      |      |      |                    |      |      |   1  |   2  |   3  |      |      |
- * |-------------+------+------+------+------+------+------+------+------+------+------+------+------+------+-------------|
- * |      |      |      |      ||||||||      |      |      ||||||||      |      | RAISE||||||||      |      |      |      |
- * .----------------------------------------------------------------------------------------------------------------------.
- */ /* FIXME boot and reset are not yet locale aware */
                         bindings = <
-&none         &none         &none         &none         &none         &none         &none                  &none         &none         &none         &none         &none          &none         &none
-&none         &none         &none         &none         &none         &none         &none                  &none         &none         &kp N7        &kp N8        &kp N9         &none         &none
-&none         &none         &none         &none         &none         &none         &none                  &none         &none         &kp N4        &kp N5        &kp N6         &none         &none
-&none         &none         &none         &none         &none         &none         &none                  &none         &none         &kp N1        &kp N2        &kp N3         &none         &none
-&none         &none         &none         &none         &none         &none         &none                  &none         &none         &none         &none         &none          &none         &none
-                        >;
-                };
-                raise_layer {
-/* .----------------------------------------------------------------------------------------------------------------------.
- * |      | BT 0 | BT 1 | BT 2 | BT 3 |      | BTCL |                    |      |      |      |      |      |      |      |
- * |------+------+------+------+------+------+------+--------------------+------+------+------+------+------+------+------|
- * |      |      |      |      |      |      |      |                    |      |      |      |      |      |      |      |
- * |------+------+------+------+------+------+------+--------------------+------+------+------+------+------+------+------|
- * |      |      |      |      |      |      |      |                    |      |      |      |      |      |      |      |
- * |------+------+------+------+------+------+---------------------------+------+------+------+------+------+------+------|
- * | Shift|      |      |      |      |      |      |                    |      |      |      |      | Boot | Reset| Shift|
- * |-------------+------+------+------+------+------+------+------+------+------+------+------+------+------+-------------|
- * | Ctlr |      |      |  Win |||||||| Alt  |      | Lower|||||||| Raise|      | RAlt ||||||||      |      |      | RCtrl|
- * .----------------------------------------------------------------------------------------------------------------------.
- */ /* FIXME boot and reset are not yet locale aware */
-                        bindings = <
-&none         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none         &bt BT_CLR             &none         &none         &none         &none         &none         &none         &none
-&none         &none         &none         &none         &none         &none         &none                  &none         &none         &none         &none         &none         &none         &none
-&none         &none         &none         &none         &none         &none         &none                  &none         &none         &none         &none         &none         &none         &none
-&trans        &none         &none         &none         &none         &none         &none                  &none         &none         &none         &none         &bootloader   &sys_reset        &trans
-&trans        &none         &none         &trans        &trans        &none         &trans                 &trans        &none         &trans        &none         &none         &none         &trans
+&none         &none         &none         &none         &none         &none         &none                  &none                  &none                          &none         &none         &none          &none         &none
+&none         &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &none         &none                  &none                  &none                          &kp N7        &kp N8        &kp N9         &none         &none
+&none         &kp EXCL      &kp AT        &kp UNDER     &none         &none         &none                  &none                  &none                          &kp N4        &kp N5        &kp N6         &none         &none
+&none         &none         &kp K_CUT     &kp K_COPY    &kp K_PASTE   &none         &none                  &none                  &none                          &kp N1        &kp N2        &kp N3         &none         &none
+&none         &none         &none         &none         &none         &none         &none                  &kp RCTRL(LGUI(RIGHT)) &kp RCTRL(LGUI(LEFT))          &kp N0        &none         &none          &none         &none
                         >;
                 };
         };

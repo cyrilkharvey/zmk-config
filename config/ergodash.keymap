@@ -7,7 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-#define DEFAULT 0
+#define BASE    0
 #define LOWER   1
 #define UPPER   2
 
@@ -16,16 +16,18 @@
         keymap {
                 compatible = "zmk,keymap";
 
-                default_layer {
+                base_layer {
+                        label = "BASE";
                         bindings = <
 &none         &none         &none         &none         &none         &none         &none                  &none         &none         &none         &none         &none         &none         &none  
 &kp  ESC      &kp  Q        &kp  W        &kp  F        &kp  P        &kp  B        &kp  MINUS             &kp  EQUAL    &kp  J        &kp  L        &kp  U        &kp  Y        &kp  SEMI     &kp  BSLH
-&mo  UPPER    &kp  A        &kp  R        &kp  S        &kp  T        &kp  G        &kp  DEL               &kp  BSPC     &kp  M        &kp  N        &kp  E        &kp  I        &kp  O        &kp  SQT
+&none         &kp  A        &kp  R        &kp  S        &kp  T        &kp  G        &kp  DEL               &kp  BSPC     &kp  M        &kp  N        &kp  E        &kp  I        &kp  O        &kp  SQT
 &kp  LSHFT    &kp  Z        &kp  X        &kp  C        &kp  D        &kp  V        &none                  &none         &kp  K        &kp  H        &kp  COMMA    &kp  DOT      &kp  SLASH    &kp  MINUS
-&kp  LCTRL    &kp LMETA     &none         &none         &mo  LOWER    &kp  BSPC     &kp  RET               &kp  TAB      &kp  SPACE    &none         &none         &kp  LBKT     &kp  RBKT     &kp  RCTRL
+&kp  LCTRL    &kp LMETA     &none         &none         &mo  LOWER    &kp  BSPC     &kp  RET               &kp  TAB      &kp  SPACE    &mo UPPER     &none         &kp  LBKT     &kp  RBKT     &kp  RCTRL
                         >;
                 };
                 lower_layer {
+                        label = "LOWER";
                         bindings = <
 &none         &none         &none         &none         &none         &none         &none                  &none         &none         &none         &none         &none          &none         &none
 &none         &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &none         &none                  &none         &none         &kp N7        &kp N8        &kp N9         &none         &none
@@ -35,6 +37,7 @@
                         >;
                 };
                 upper_layer {
+                        label = "UPPER";
                         bindings = <
 &none         &none         &none         &none         &none         &none         &none                  &none         &none         &none         &none         &none          &none         &none
 &none         &kp K_CUT     &kp K_COPY    &kp K_PASTE   &none         &none         &none                  &none         &none         &kp RIGHT     &kp DOWN      &kp UP         &kp LEFT      &none

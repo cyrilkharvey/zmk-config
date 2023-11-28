@@ -19,11 +19,11 @@
                 default_layer {
                         label = "DEFAULT";
                         bindings = <
-&none         &none         &none         &none         &none         &none         &none                  &none         &none         &none         &none         &none         &none         &none  
-&kp  ESC      &kp  Q        &kp  W        &kp  F        &kp  P        &kp  B        &kp  MINUS             &kp  EQUAL    &kp  J        &kp  L        &kp  U        &kp  Y        &kp  SEMI     &kp  BSLH
-&none         &kp  A        &kp  R        &kp  S        &kp  T        &kp  G        &kp  DEL               &kp  BSPC     &kp  M        &kp  N        &kp  E        &kp  I        &kp  O        &kp  SQT
-&kp  LSHFT    &kp  Z        &kp  X        &kp  C        &kp  D        &kp  V        &none                  &none         &kp  K        &kp  H        &kp  COMMA    &kp  DOT      &kp  SLASH    &kp  MINUS
-&kp  LCTRL    &kp LCMD      &none         &none         &mo  LOWER    &kp  BSPC     &kp  RET               &kp  TAB      &kp  SPACE    &mo RAISE     &none         &kp  LBKT     &kp  RBKT     &kp  RCTRL
+&none         &none            &none         &none         &none         &none         &none                  &none         &none         &none         &none         &none         &none         &none  
+&kp  ESC      &kp  Q           &kp  W        &kp  F        &kp  P        &kp  B        &kp  MINUS             &kp  EQUAL    &kp  J        &kp  L        &kp  U        &kp  Y        &kp  SEMI     &kp  BSLH
+&none         &kp  A           &kp  R        &kp  S        &kp  T        &kp  G        &kp  DEL               &kp  BSPC     &kp  M        &kp  N        &kp  E        &kp  I        &kp  O        &kp  SQT
+&kp  LSHFT    &kp  Z           &kp  X        &kp  C        &kp  D        &kp  V        &none                  &none         &kp  K        &kp  H        &kp  COMMA    &kp  DOT      &kp  SLASH    &kp  MINUS
+&kp  LCTRL    &kp LMETA        &none         &none         &mo  LOWER    &kp  BSPC     &kp  RET               &kp  TAB      &kp  SPACE    &mo RAISE     &none         &kp  LBKT     &kp  RBKT     &kp  RCTRL
                         >;
                 };
                 lower_layer {
@@ -39,11 +39,11 @@
                 raise_layer {
                         label = "RAISE";
                         bindings = <
-&none         &none         &none         &none         &none         &none         &none                  &none         &none         &none         &none         &none          &none         &none
-&none         &none         &none         &none         &none         &none         &none                  &none         &none         &none         &none         &none          &none         &none
-&none         &kp LCMD(X)   &kp LCMD(C)   &kp LCMD(V)   &none         &none         &none                  &none         &none         &kp LEFT      &kp DOWN      &kp UP         &kp RIGHT     &none
-&none         &none         &none         &none         &none         &none         &none                  &none         &none         &none         &none         &none          &none         &none
-&none         &none         &none         &none         &none         &none         &none                  &none         &none         &none         &none         &none          &none         &none
+&none         &none                 &none                 &none                 &none         &none         &none                  &none         &none         &none         &none         &none          &none         &none
+&none         &none                 &none                 &none                 &none         &none         &none                  &none         &none         &none         &none         &none          &none         &none
+&none         &kp LEFT_COMMAND(X)   &kp LEFT_COMMAND(C)   &kp LEFT_COMMAND(V)   &none         &none         &none                  &none         &none         &kp LEFT      &kp DOWN      &kp UP         &kp RIGHT     &none
+&none         &none                 &none                 &none                 &none         &none         &none                  &none         &none         &none         &none         &none          &none         &none
+&none         &none                 &none                 &none                 &none         &none         &none                  &none         &none         &none         &none         &none          &none         &none
                         >;
                 };
         };

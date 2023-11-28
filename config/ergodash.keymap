@@ -41,7 +41,7 @@
                         bindings = <
 &none         &none         &none         &none         &none         &none         &none                  &none         &none         &none         &none         &none          &none         &none
 &none         &none         &none         &none         &none         &none         &none                  &none         &none         &none         &none         &none          &none         &none
-&none         &kp K_CUT     &kp K_COPY    &kp K_PASTE   &none         &none         &none                  &none         &none         &kp RIGHT     &kp DOWN      &kp UP         &kp LEFT      &none
+&none         &kp K_CUT     &kp K_COPY    &kp K_PASTE   &none         &none         &none                  &none         &none         &kp LEFT      &kp DOWN      &kp UP         &kp RIGHT     &none
 &none         &none         &none         &none         &none         &none         &none                  &none         &none         &none         &none         &none          &none         &none
 &none         &none         &none         &none         &none         &none         &none                  &none         &none         &none         &none         &none          &none         &none
                         >;
